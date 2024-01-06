@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Dashboard</title>
+  <link rel="stylesheet" href="/feed/css/feedStyle.css">
+  <script src="https://cdn.tiny.cloud/1/m6mtx5736qyelz22vropfk5z37p74h5jqslgpang71m0u5gg/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+</head>
+
+<body>
+  <header>
+    <h1>UpiBlog</h1>
+  </header>
+  <div class="dashboard-container">
+    <div id="session-container">
+      <div class="user-info" id="user-info"></div>
+      <div class="actions">
+        <button id="createArticleBtn">Nuevo Artículo</button>
+        <button id="showUserArticlesBtn">Mis Artículos</button>
+      </div>
+      <div class="session-control">
+        <button id="cerrarSesion">Cerrar Sesion</button>
+      </div>
+    </div>
+    <div class="feed" id="feed"></div>
+    <div id="articleCreation" style="display: none;">
+      <p>
+        <label for="titulo">Titulo:</label>
+        <br>
+        <input id="titulo" style="width: 100%;" type="text" autocomplete="off">
+      </p>
+      <p>
+        <label for="descripcion">Descripcion</label>
+        <br>
+        <textarea id="descripcion" rows="4" cols="50" style="resize: none;"
+          placeholder="Una breve descripcion de tu articulo" autocomplete="off"></textarea>
+        <br>
+        <label id="contador" style="font-size: 10pt; color: #cccccc;">Caracteres restantes 100</label>
+      </p>
+      <button id="publicarBtn">Publicar</button>
+      <textarea id="editor" autocomplete="off"></textarea>
+    </div>
+  </div>
+  <script type="module" src="/feed/controllers/userInfoCtrl.js"></script>
+  <script type="module" src="/feed/controllers/feedCtrl.js"></script>
+  <script type="module" src="/feed/controllers/publicarCtrl.js"></script>
+  <script type="module" src="/login/infrastructure/controllers/logOutCtrl.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Obtén el textarea y el párrafo del contador
+      var textarea = document.getElementById('descripcion');
+      var contador = document.getElementById('contador');
+
+      // Establece el límite de caracteres
+      var limiteCaracteres = 100;
+
+      // Agrega un evento de escucha al textarea
+      textarea.addEventListener('input', function () {
+        // Obtén la longitud actual del texto
+        var longitudTexto = textarea.value.length;
+
+        // Calcula los caracteres restantes
+        var caracteresRestantes = limiteCaracteres - longitudTexto;
+
+        // Actualiza el contador y trunca el texto si es necesario
+        contador.textContent = 'Caracteres restantes: ' + caracteresRestantes;
+
+        if (longitudTexto > limiteCaracteres) {
+          textarea.value = textarea.value.slice(0, limiteCaracteres);
+          contador.textContent = 'Caracteres restantes: 0';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

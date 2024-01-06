@@ -1,0 +1,183 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+header {
+  background-color: #3498db;
+  /* Color de fondo del encabezado */
+  color: #fff;
+  /* Color del texto del encabezado */
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+.dashboard-container {
+  display: grid;
+  column-gap: 10px;
+  grid-template-rows: auto;
+  grid-template-columns: 200px auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 7vh;
+}
+
+#session-container {
+  grid-column: 1;
+  display: grid;
+  grid-template-rows: 200px 200px auto;
+  grid-template-columns: 200px;
+  row-gap: 10px;
+}
+
+.user-info {
+  grid-row: 1;
+  grid-column: 1;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.feed {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#articleCreation {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.actions {
+  grid-row: 2;
+  grid-column: 1;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.session-control {
+  grid-row: 3;
+  grid-column: 1;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button#cerrarSesion {
+  background-color: #e74c3c;
+}
+
+/* Estilos para la imagen de perfil */
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Estilos para las tarjetas de artículos en el feed */
+.article-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h2 {
+  color: #333;
+}
+
+.article-card p {
+  color: #666;
+}
+
+.article-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Añade estilos para la imagen de perfil */
+.profile-image {
+  width: 100px;
+  /* Ajusta el tamaño según tus preferencias */
+  height: 100px;
+  border-radius: 50%;
+  /* Para una imagen de perfil redonda */
+  margin-bottom: 10px;
+}
+
+/* Estilos para la tarjeta de artículo */
+.article-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.article-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+/* Estilos para la información del autor */
+.autorInfo-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.autorInfo-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.autorInfo-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #3498db;
+  /* Color azul, puedes cambiarlo según tu preferencia */
+}

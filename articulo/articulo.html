@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículo</title>
+  <!-- Agrega tus estilos si es necesario -->
+  <link rel="stylesheet" href="css/articuloStyle.css">
+  <script src="https://cdn.tiny.cloud/1/m6mtx5736qyelz22vropfk5z37p74h5jqslgpang71m0u5gg/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+</head>
+
+<body>
+  <header>
+    <div id="info-articulo">
+      <h1 id="titulo-articulo"></h1>
+      <p id="desc-articulo"></p>
+    </div>
+    <hr>
+    <label for="info-autor">Autor: </label>
+    <div id="info-autor">
+      <img id="autor-foto">
+      <p id="autor-articulo"></p>
+    </div>
+    <div id="toolbar" style="display: none;">
+      <button id="editar-articulo">Editar</button>
+      <button id="eliminar-articulo">Eliminar</button>
+    </div>
+  </header>
+  <div id="confirmaEliminar" class="modal">
+    <div class="modal-content">
+      <p>¿Estás seguro de que deseas eliminar este artículo?</p>
+      <p style="color: red;">Esta accion es permanente</p>
+      <button id="confirmarBtn">Aceptar</button>
+      <button id="cancelarBtn">Cancelar</button>
+    </div>
+  </div>
+
+  <article id="cuerpo-articulo">
+    <!-- El cuerpo del artículo se llenará dinámicamente con JavaScript -->
+  </article>
+  <div id="editor-container" style="display: none;">
+    <button id="guardar-edicion">Guardar</button>
+    <textarea id="editor"></textarea>
+  </div>
+  <script type="module" src="vistaArticuloCtrl.js">
+
+  </script>
+</body>
+
+</html>
