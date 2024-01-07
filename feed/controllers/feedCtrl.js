@@ -72,7 +72,6 @@ async function obtenerArticulos() {
 }
 
 async function obtenerArticulosDelUsuario() {
-  console.log(loggedUser.uid);
   const q = query(articulosRef, where("uidAuthor", "==", loggedUser.uid), limit(LIMITE_PAGINA));
   getDocs(q).then((snapshot) => {
     const feed = document.getElementById("feed");

@@ -4,7 +4,6 @@ import { firebaseApp } from "/shared/firebaseConfig.js";
 document.getElementById("cerrarSesion").addEventListener("click", () => {
   const auth = getAuth(firebaseApp);
   signOut(auth).then(() => {
-    console.log("Sesion cerrada");
     window.location.href = "/index.html";
   });
 })
