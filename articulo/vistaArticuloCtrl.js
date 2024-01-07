@@ -119,7 +119,7 @@ document.getElementById("confirmarBtn").addEventListener("click", () => {
   const documentContentRef = ref(st, articleDownloadUrl);
   deleteObject(documentContentRef).then(() => {
     deleteDoc(docRef).then(() => {
-      window.location.href = "/feed/feed.html"
+      window.location.href = "/Upiblog/feed/feed.html"
     })
   })
 });

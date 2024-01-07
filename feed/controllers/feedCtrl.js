@@ -64,7 +64,7 @@ async function obtenerArticulos() {
     autorInfo.appendChild(autorNombre);
     card.appendChild(autorInfo);
     const link = document.createElement("a");
-    link.href = `/articulo/articulo.html?articleID=${elemento.idArticulo}`;
+    link.href = `/Upiblog/articulo/articulo.html?articleID=${elemento.idArticulo}`;
     link.textContent = "Ver Articulo"
     card.appendChild(link);
     feed.appendChild(card);
@@ -111,7 +111,7 @@ async function obtenerArticulosDelUsuario() {
       autorInfo.appendChild(autorNombre);
       card.appendChild(autorInfo);
       const link = document.createElement("a");
-      link.href = `/articulo/articulo.html?articleID=${elemento.idArticulo}`;
+      link.href = `/Upiblog/articulo/articulo.html?articleID=${elemento.idArticulo}`;
       link.textContent = "Ver Articulo"
       card.appendChild(link);
       feed.appendChild(card);

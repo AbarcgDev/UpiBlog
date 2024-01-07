@@ -4,6 +4,6 @@ import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js";
 document.getElementById("cerrarSesion").addEventListener("click", () => {
   const auth = getAuth(firebaseApp);
   signOut(auth).then(() => {
-    window.location.href = "/index.html";
+    window.location.href = "/Upiblog/index.html";
   });
 })
