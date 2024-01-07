@@ -1,6 +1,6 @@
 import { User } from '/login/domain/User.js';
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { firebaseApp } from "/shared/firebaseConfig.js";
+import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js";
 
 
 const urlActual = window.location.href;
