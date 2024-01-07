@@ -8,7 +8,7 @@ async function handleGoogleSignIn() {
   const provider = new GoogleAuthProvider();
   signInWithPopup(auth, provider)
     .then((result) => {
-      window.location.href = "/Upiblog/feed/feed.html";
+      window.location.href = "/feed/feed.html";
     }).catch((error) => {
       console.error(error);
     })

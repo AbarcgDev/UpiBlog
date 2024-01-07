@@ -9,7 +9,7 @@ async function handleGoogleSignIn() {
   signInWithPopup(auth, provider)
     .then((result) => {
       const info = getAdditionalUserInfo(result);
-      window.location.href = `/Upiblog/feed/feed.html?name=${info.username}`;
+      window.location.href = `/feed/feed.html?name=${info.username}`;
     }).catch((error) => {
       console.error(error.message);
     })
