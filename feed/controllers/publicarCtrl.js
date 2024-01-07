@@ -4,6 +4,9 @@ import { getUserInfo } from "./userInfoCtrl.js";
 import { Articulo } from "/articulo/Articulo.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
 
+const urlActual = window.location.href;
+const url = new URL(urlActual);
+const nombreURL = url.searchParams.get('name');
 
 document.getElementById("publicarBtn").addEventListener("click", () => {
   const storage = getStorage(firebaseApp);
@@ -27,10 +30,11 @@ document.getElementById("publicarBtn").addEventListener("click", () => {
 });
 
 function saveToDatabase(titulo, descripcion, downloadURL) {
+  const nombre = nombreURL ? nombreURL : user.displayName;
   getUserInfo.then(async (user) => {
     const newArticle = new Articulo(
       user.uid,
-      user.displayName,
+      nombre,
       titulo,
       descripcion,
       user.photoURL,

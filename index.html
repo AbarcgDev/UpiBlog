@@ -11,7 +11,7 @@
   <link href="css/index.css" rel="stylesheet">
   <script type="module" src="shared/firebaseConfig.js"></script>
   <script type="module" src="login/infrastructure/controllers/googleSignIn.js" defer></script>
-  <script type="module" src="login/infrastructure/controllers/facebookSignIn.js" defer></script>
+  <script type="module" src="login/infrastructure/controllers/githubSignIn.js" defer></script>
 </head>
 
 <body>
@@ -26,10 +26,12 @@
     <!-- Sección principal a la derecha -->
     <main id="main-container">
       <div id="googleSignInBtn">
+        <span>Entrar con Google</span>
         <i class=" fa-brands fa-google"></i>
       </div>
-      <div id="facebookSignInBtn">
-        <i class=" fa-brands fa-facebook"></i>
+      <div id="githubSignInBtn">
+        <span>Entrar con Github</span>
+        <i class=" fa-brands fa-github"></i>
       </div>
     </main>
   </div>
