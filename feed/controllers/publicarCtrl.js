@@ -1,7 +1,7 @@
 import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
-import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js";
+import { firebaseApp } from "/Upiblog/shared/firebaseConfig.js";
 import { getUserInfo } from "./userInfoCtrl.js";
-import { Articulo } from "/UpiBlog/articulo/Articulo.js";
+import { Articulo } from "/Upiblog/articulo/Articulo.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
 
 const urlActual = window.location.href;

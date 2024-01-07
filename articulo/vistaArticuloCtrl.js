@@ -1,5 +1,5 @@
 import { getFirestore, collection, doc, getDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
-import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js"
+import { firebaseApp } from "/Upiblog/shared/firebaseConfig.js"
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { getStorage, ref, getBlob, uploadBytes, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
 

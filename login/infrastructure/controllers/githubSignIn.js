@@ -1,5 +1,5 @@
 import { getAuth, signInWithPopup, GithubAuthProvider, getAdditionalUserInfo } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js";
+import { firebaseApp } from "/Upiblog/shared/firebaseConfig.js";
 
 document.getElementById("githubSignInBtn").addEventListener('click', handleGoogleSignIn);
 

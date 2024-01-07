@@ -1,6 +1,6 @@
 import { getFirestore, getDocs, collection, query, orderBy, limit, where } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
-import { firebaseApp } from "/UpiBlog/shared/firebaseConfig.js";
-import { Articulo } from "/UpiBlog/articulo/Articulo.js"
+import { firebaseApp } from "/Upiblog/shared/firebaseConfig.js";
+import { Articulo } from "/Upiblog/articulo/Articulo.js"
 import { loggedUser } from "./userInfoCtrl.js"
 
 const LIMITE_PAGINA = 20;
